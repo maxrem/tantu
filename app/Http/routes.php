@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/api/twitter/search_tweets/{q}', 'ApiTwitterController@SearchTweets');
