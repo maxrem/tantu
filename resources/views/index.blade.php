@@ -19,6 +19,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
         <section id="feed">
     
+        @if (count($tweets) > 0)
+            <h2>Results</h2>
+        @endif
         @foreach ($tweets as $tweet)
             <div class="feeditem selected" id="{{ $tweet->id_str }}">
                 <a target="_blank" href="https://twitter.com/{{ $tweet->userScreenName }}/status/{{ $tweet->id }}">
