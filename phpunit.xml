@@ -23,5 +23,13 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        
+        <env name="TWITTER_CONSUMER_KEY" value="muuRTiQjzxDJtuWzxdqcw"/>
+        <env name="TWITTER_CONSUMER_SECRET" value="ymVhos8VNlRMAV5gBccHzD9nOlaEjuBCpmMmfnD4U60"/>
+        <env name="TWITTER_ACCESS_TOKEN" value="35798691-frvJeuJiwRsYFJ5rV2UIcWrx3U52RJRABaJ2N6CZH"/>
+        <env name="TWITTER_ACCESS_TOKEN_SECRET" value="FlvN8ZFz4UnOw3j3tonl5OcTKtTABdWyGOCqIzMqzakkj"/>
+
+        <env name="TWITTER_SEARCH_QUERY" value="php"/>
+        <env name="TWITTER_STATUS_ID" value="735941193687785472"/> <!-- PHP 5.6.22 has been released -->
     </php>
 </phpunit>

@@ -20,7 +20,7 @@
         }
 
         public function call() {
-            $result = $this->twitterConn->get("statuses/show", $this->data);
+            $result = $this->twitterConn->get('statuses/show', $this->data);
             $this->status = new Status($result);
 
             return $this->status;

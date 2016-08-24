@@ -27,8 +27,10 @@
             $result = $this->twitterConn->get('search/tweets', $this->data);
             
             $tweets = array();
-            foreach ($result->statuses as $status) {
-                $tweets[] = new Status($status);
+            if (isset($result->statuses)) {
+                foreach ($result->statuses as $status) {
+                    $tweets[] = new Status($status);
+                }
             }
             
             return $tweets;
