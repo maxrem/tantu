@@ -13,12 +13,20 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 class PageController extends Controller
 {
     protected $query;
-    protected $tweet_count;
+    protected $tweetCount;
     protected $includeDate;
     protected $includeDateChecked;
 
+    function __construct() {
+        $this->query = '';
+        $this->tweetCount = 20;
+        $this->includeDate = -1;
+        $this->includeDateChecked = '';
+    }
+
     public function getIndex() {
-        return view('index');
+        $viewVars = $this->getViewVariables();
+        return view('index', $viewVars);
     }
 
     public function postIndex(Request $request) {
@@ -26,7 +34,8 @@ class PageController extends Controller
         $this->getInputVariables($request);
 
         $twitterSearchResults = $this->callTwitterSearch();
-        $viewVars = array_merge($this->getViewVariables(), ['tweets' => $twitterSearchResults]);
+
+        $viewVars = $this->getViewVariables($twitterSearchResults);
         
         return view('index', $viewVars);
     }
@@ -38,11 +47,12 @@ class PageController extends Controller
         $this->includeDateChecked = $this->includeDate === 1 ? ' checked' : '';
     }
 
-    protected function getViewVariables() {
+    protected function getViewVariables($tweets = array()) {
         return [
             'query' => $this->query,
             'tweetCount' => $this->tweetCount,
-            'includeDateChecked' => $this->includeDateChecked
+            'includeDateChecked' => $this->includeDateChecked,
+            'tweets' => $tweets
         ];
     }
 
