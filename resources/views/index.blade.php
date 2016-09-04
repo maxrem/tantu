@@ -24,11 +24,11 @@
             <h2 v-show="results.length > 0">Results</h2>
             <div class="feeditem selected" id="@{{ tweet.id_str }}" v-for="tweet in results">
                 <a target="_blank" href="https://twitter.com/@{{ tweet.userScreenName }}/status/@{{ tweet.id }}">
-                    <img class="profileimage" src="@{{ tweet.userProfileImageUrlHttps }}">
+                    <img class="profileimage" v-bind:src="tweet.userProfileImageUrlHttps">
                 </a>
                 <small class="time">TODO</small>
                 <strong class="fullname">@{{ tweet.userName }}</strong>
-                <span class="userscreenname"> @{{ '@' . tweet.userScreenName }}</span>
+                <span class="userscreenname"> @{{ '@' + tweet.userScreenName }}</span>
                 <p class="tweettext" data-text="@{{ tweet.text }}">@{{ tweet.text }}</p>
             </div>
         </section>
