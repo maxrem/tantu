@@ -1,0 +1,68 @@
+.feeditem {
+
+    min-height:90px;
+    margin-bottom:10px;
+    width: 440px;cursor:
+    hand;cursor: pointer;
+
+    &:hover {
+        background: #DADADA;
+    }
+
+    a {
+        color:#0084B4;
+        text-decoration: none;
+
+        &:hover {
+            color:#0084B4;
+            text-decoration: underline;
+        }
+    }
+
+    .selected {
+        background: #EBEBEB;
+
+        &:hover {
+            background: #DADADA;
+        }
+    }
+
+    .fullname {
+        font-weight: bold;
+        color: #333;
+        font-size:14px;
+    }
+
+    .userscreenname {
+        direction: ltr;
+        unicode-bidi: embed;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .tweettext {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        color: #333;
+        font-size:14px;
+        margin:0;
+    }
+
+    .profileimage {
+        float: left;
+        margin-top: 3px;
+        margin-left: -58px;
+        width: 48px;
+        height: 48px;
+        border-radius: 5px;
+        -moz-force-broken-image-icon: 1;
+        border: 0;
+    }
+
+    .time {
+        font-size: 12px;
+        color: #999;
+        float: right;
+        padding: 3px 0;
+    }
+}
