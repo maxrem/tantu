@@ -19,7 +19,10 @@
             <input id="includeDate" name="includeDate" type="checkbox" value="1"{{ $includeDateChecked or '' }}>
             <label for="includeDate">Include date in export</label>
         </div>
-        <button class="btn btn-default" @click="searchTweets">Submit</button>
+        <div id="spinner-form-group" class="form-group">
+            <button class="btn btn-default" @click="searchTweets">Submit</button>
+            <div id="spinner"></div>
+        </div>
         
         <section id="results">
             <h2 v-show="results.length > 0">Results</h2>
