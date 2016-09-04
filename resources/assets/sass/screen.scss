@@ -2,8 +2,7 @@
 
     min-height:90px;
     margin-bottom:10px;
-    width: 440px;cursor:
-    hand;cursor: pointer;
+    cursor: pointer;
 
     &:hover {
         background: #DADADA;
@@ -31,6 +30,7 @@
         font-weight: bold;
         color: #333;
         font-size:14px;
+        margin-left: 10px;
     }
 
     .userscreenname {
@@ -46,12 +46,12 @@
         color: #333;
         font-size:14px;
         margin:0;
+        margin-left: 58px;
     }
 
     .profileimage {
         float: left;
         margin-top: 3px;
-        margin-left: -58px;
         width: 48px;
         height: 48px;
         border-radius: 5px;

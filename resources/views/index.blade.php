@@ -1,8 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Tantu</h1>
-    <div id="app">
+    
+    <div id="app" class="col-md-6 col-md-offset-3">
+        <h1>Tantu</h1>
         {{ csrf_field() }}
         <div class="form-group">
             <label for="query">Search</label>
