@@ -13,5 +13,3 @@
 
 Route::get('/', 'PageController@getIndex');
 Route::post('/', 'PageController@postIndex');
-
-Route::get('/api/twitter/search_tweets/{q}', 'ApiTwitterController@SearchTweets');
