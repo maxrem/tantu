@@ -30,7 +30,7 @@
                 <a target="_blank" href="https://twitter.com/@{{ tweet.userScreenName }}/status/@{{ tweet.id }}">
                     <img class="profileimage" v-bind:src="tweet.userProfileImageUrlHttps">
                 </a>
-                <small class="time">TODO</small>
+                <small class="time">@{{ tweet.createdAtString }}</small>
                 <strong class="fullname">@{{ tweet.userName }}</strong>
                 <span class="userscreenname"> @{{ '@' + tweet.userScreenName }}</span>
                 <p class="tweettext" data-text="@{{ tweet.text }}">@{{ tweet.text }}</p>

@@ -33,5 +33,6 @@ class Status {
         $this->userProfileImageUrlOriginalHttps = Helper::getOriginalProfileImageUrl($result->user->profile_image_url_https);
         $this->userProfileImageUrlOriginal = Helper::getOriginalProfileImageUrl($result->user->profile_image_url);
         $this->created_at = new Carbon($result->created_at);
+        $this->createdAtString = $this->created_at->format('d-m-Y G:i');
     }
 }
