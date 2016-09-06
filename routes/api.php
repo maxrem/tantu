@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('twitter/search_tweets/{q}', 'ApiTwitterController@SearchTweets');
+Route::get('twitter/search_tweets/{q}/{count?}', 'ApiTwitterController@SearchTweets');

@@ -15,11 +15,20 @@ class SearchTweetsCall implements ApiCallInterface {
         $this->data = array();
     }
 
-    public function setup($q, $geocode = false) {
+    public function setup($q, $count = null, $geocode = null) {
         $this->data['q'] = $q;
 
         if ($geocode) {
             $this->data['geocode'] = $geocode;
+        }
+
+        if ($count) {
+            $count = intval($count);
+
+            $count = $count > 100 ? 100 : $count;
+            $count = $count < 0 ? 0 : $count;
+
+            $this->data['count'] = $count;
         }
     }
 

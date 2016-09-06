@@ -7,13 +7,11 @@
         {{ csrf_field() }}
         <div class="form-group">
             <label for="query">Search</label>
-            <input id="query" name="query" type="text" class="form-control"
-                value="{{ $query or '' }}" v-model="query"
-            >
+            <input id="query" name="query" type="text" class="form-control" v-model="query">
         </div>
         <div class="form-group">
-            <label for="tweetCount">Result count (max. 100)</label>
-            <input id="tweetCount" name="tweetCount" type="text" class="form-control" value="{{ $tweetCount or '20' }}">
+            <label for="count">Result count (max. 100)</label>
+            <input id="count" name="count" type="text" class="form-control" v-model="count" value="20">
         </div>
         <div class="form-group">
             <input id="includeDate" name="includeDate" type="checkbox" value="1"{{ $includeDateChecked or '' }}>

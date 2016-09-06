@@ -5,6 +5,7 @@ new Vue({
 
     data: {
         query: '',
+        count: '',
         results: []
     },
 
@@ -13,7 +14,10 @@ new Vue({
 
             $('#spinner').spin('flower');
 
-            var resource = this.$resource('/api/twitter/search_tweets/' + encodeURI(this.query));
+            var resource = this.$resource('/api/twitter/search_tweets/' +
+                encodeURI(this.query) + '/' +
+                encodeURI(this.count)
+            );
             resource.get()
                 .then((response) => {
                     this.$set('results', response.json());

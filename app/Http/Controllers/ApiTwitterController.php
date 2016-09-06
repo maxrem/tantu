@@ -12,7 +12,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class ApiTwitterController extends Controller
 {
-    public function searchTweets($q) {
+    public function searchTweets($q, $count = null) {
 
         $twitterConn = new TwitterOAuth(
             env('TWITTER_CONSUMER_KEY'),
@@ -22,7 +22,7 @@ class ApiTwitterController extends Controller
         );
 
         $apiCall = new SearchTweetsCall($twitterConn);
-        $apiCall->setup($q);
+        $apiCall->setup($q, $count);
         
         return $apiCall->call();
     }
