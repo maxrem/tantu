@@ -1,4 +1,3 @@
-* Add spinner on submit query
 * Tweet display date time
 * Result count input
 * On Enter submit form
