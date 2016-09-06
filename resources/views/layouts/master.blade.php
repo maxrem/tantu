@@ -10,8 +10,6 @@
     <div class="container">
         @yield('content')
     </div>
-    <script src="js/libs.js"></script>
-    <script src="js/all.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
