@@ -8,25 +8,10 @@ class FrontendTest extends TestCase
 {
     /**
      * Check if homepage works
-     *
-     * @return void
      */
-    public function testHome()
+    public function testHome(): void
     {
-        $this->visit('/')
-             ->see('Tantu');
-    }
-
-    /**
-     * Check if form works
-     *
-     * @return void
-     */
-    public function testForm()
-    {
-        $this->visit('/')
-             ->type(env('TWITTER_SEARCH_QUERY'), 'query')
-             ->press('Submit')
-             ->see('Results');
+        $response = $this->get('/');
+        $response->assertSee('Tantu');
     }
 }
