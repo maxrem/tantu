@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  mariadb:
+    image: mariadb:10.4
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: playdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - 13306:3306
