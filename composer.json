@@ -1,6 +1,6 @@
 {
     "name": "maxrem/tantu",
-    "description": "Tantu - Tweet search front-end",
+    "description": "Tantu - Search for Twitter messages and convert them to downloadable images",
     "keywords": ["tantu", "tweet", "search"],
     "license": "MIT",
     "type": "project",

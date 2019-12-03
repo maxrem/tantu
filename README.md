@@ -1,3 +1,3 @@
 # Tantu
 
-Tweet search front-end
+Search for Twitter messages and convert them to downloadable images
